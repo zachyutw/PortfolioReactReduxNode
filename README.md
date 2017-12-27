@@ -30,3 +30,11 @@ Google oauth2.0
 ```
 npm install --save passport-google-oauth20
 ```
+
+
+# Introduce functional
+## Use google oauth to build a account info.
+### Server
+* config
+* routes
+* services

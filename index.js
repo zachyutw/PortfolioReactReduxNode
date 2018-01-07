@@ -4,13 +4,13 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
 
-const authRoutes = require('./routes/authRoutes');
-const billingRoutes = require('./routes/billingRoutes');
 
 const keys =require('./config/keys');
 
-
+// some error would happen when the route require before models
 require('./models/User');
+require('./models/test');
+require('./models/Survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -29,9 +29,15 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-//require('./routes/authRoutes')(app);
+// some error would happen when the route require before models
+require('./routes/authRoutes')(app);
+require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
+/*
 authRoutes(app);
 billingRoutes(app);
+surveyRoutes(app);
+*/
 
 if (process.env.NODE_ENV === 'production'){
     // Express will serve up production assets

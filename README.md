@@ -56,9 +56,15 @@ npm install --save axios redux-thunk
 
 # Billing
 ## Stripe Checkout-StripeJS forms
-### React Dependecies
+### Front End Library
 ```
-react-stripe-checkout
+npm install --save react-stripe-checkout
+```
+### Back End Library
+https://stripe.com/docs/api/node#intro
+```
+npm install --save stripe
 ```
 # Adding Custom Environment Variables
-
+.env files 
+becareful about .env files are hidden in the folder.

@@ -1,5 +1,125 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  color:#fff;
+  background-color:#1E1F20;
+  padding: 2%; font: 18px/1.4 sans-serif;
+}
+.header, .header> nav {
+  background-color: #1E1F20;
+}
+ul.nav-menu {
+   margin-left: 20px;
+ 
+}
+
+/** */
+.sub-menu-parent { position: relative; }
+.sub-menu { 
+  visibility: hidden; /* hides sub-menu */
+  opacity: 0;
+  position: fixed;
+  height:100%;
+  width:96%;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.sub-menu-parent:focus .sub-menu,
+.sub-menu-parent:focus-within .sub-menu,
+.sub-menu-parent:hover .sub-menu {
+  visibility: visible; /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+.sub-menu > li {
+  color: #E00; display: block; padding: 0.5em 1em; 
+  position: relative;
+    top: 10%;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 30px;
+}
+.sub-menu> li:hover {
+  color: #F55;
+  font-size: 45px;
+    font-weight: 1500;
+}
+.sub-menu {
+  background: #1E1F20;
+}
+/**  */
+.animated-button:link, .animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+	color: #fff;
+	font-size:20px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.animated-button:link:after, .animated-button:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+.animated-button:link:hover, .animated-button:visited:hover {
+	color: #FFF;
+	text-shadow: none;
+}
+.animated-button:link:hover:after, .animated-button:visited:hover:after {
+	height: 450%;
+}
+.animated-button:link, .animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px 20% 0 20%;
+	padding: 14px 15px;
+	color: #fff;
+	font-size:20px;
+	border-radius: 0;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+/* Victoria Buttons */
+
+
+.animated-button.victoria-one:after {
+	background: #D24D57;
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	transform: translateX(-50%) translateY(-50%) rotate(-25deg);
 }

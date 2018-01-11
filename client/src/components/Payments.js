@@ -1,4 +1,4 @@
-import React, {Componet, Component} from 'react';
+import React, {Component} from 'react';
 import StripCheckout from 'react-stripe-checkout';
 import {connect} from 'react-redux';
 import * as actions from '../actions';

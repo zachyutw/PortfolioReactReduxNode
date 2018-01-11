@@ -1,5 +1,7 @@
+// eslint-disable-next-line
 import materializeCSS from 'materialize-css/dist/css/materialize.min.css';
-
+// eslint-disable-next-line
+import css from './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -7,7 +9,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 
 
-import App from './components/App';
+import App from './App';
 import reducers from './reducers';
 
 /**  temp testing codes */

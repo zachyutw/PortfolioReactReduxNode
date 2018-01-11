@@ -1,6 +1,10 @@
 // eslint-disable-next-line
 import materializeCSS from 'materialize-css/dist/css/materialize.min.css';
 // eslint-disable-next-line
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
+// eslint-disable-next-line
 import css from './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';

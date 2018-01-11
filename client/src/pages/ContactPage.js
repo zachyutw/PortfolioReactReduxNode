@@ -4,7 +4,9 @@ const ContactPage = () =>{
 
     return (
         <div className="container" style={{textAlign:'center'}}>
-                    <h1>Contact</h1>
+                    <div className="page-header">
+  <h1>Example page header <small>Subtext for header</small></h1>
+</div>
                     
         </div>
     );

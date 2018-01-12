@@ -30,7 +30,12 @@ passport.use(new GoogleStrategy({
             //we already have a reocrd with the given profile ID
             done(null,existingUser);
         } else {
-           const user = await new User({googleId: profile.id}).save();
+           const user = await new User({
+            googleId: profile.id, 
+            user_name: profile.displayName,
+            contact_info:{email: profile.emails[0].value},
+            photo:profile.photos[0].value,
+            }).save();
             done(null,user);
         }
        // console.log('access token :',accessToken);

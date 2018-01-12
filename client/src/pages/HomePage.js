@@ -1,17 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import ProfileCard from '../components/profileCard';
 
-const HomePage = () =>{
-
-    return (
-        <div className="container" style={{textAlign:'center'}}>
-                    <h1>Who am I</h1>
-                    <h2>Zach Yu</h2>
-                    <h3>unior Full Stack Developer <br/>
-Desire for a new opportunity</h3>
-                    <p>Hi! I 'm Zach Yu and I am a fresh Full Stack Developer who just graduated from BCIT computer program. My passion is to use technology based solutions, to help solve real world challenges. I love learning new stuff related to programming and technology.Coffee and Codes is my favirote, and I am very good at swimming and be a MCU nerd
-
-I build a reactjs base personal website to promote myself</p>
-        </div>
-    );
+class HomePage extends Component {
+    renderContentGoogleOauth() {
+        switch (this.props.auth) {
+            case null:
+                return '';
+            case false:
+                return <a href="/auth/google" className="btn social-signin google">Log in with Google+</a>;
+            default:
+                return <ProfileCard auth={this.props.auth} />
+        }
+    }
+    render() {
+        return (
+            <div className="HomePage">
+                <div className="container" >
+                    <div className="title"> 
+                        <div className="title-line hide-on-small-only"></div>
+                            <div className="title-text">ZYX's <div className="subtitle"> ReactRedux Website</div></div>
+                        <div className="title-line hide-on-small-only"></div>
+                        
+                    </div>
+                    <div className="page-body">  <h3>Hello! my name is Zach Yu.</h3>
+                    <h3> I am a fresh Full Stack Developer who just graduated from BCIT CIT program. </h3>
+                    <div className="row">
+                        <div className="col s8 offset-s2"><p className="hide-on-small-only">
+                            My passion is to use technology based solutions, to help solve some real world challenges. <br />
+                            I builded this website to show some of my skills.<br />
+                            Play the button below to authorization my website by using google account <br />
+                            You will find my old and newest portfolio projects in different fields on work page <br />
+                            I also have a sendgrid auto mail form on contact page <br />
+                        </p></div>
+                    </div>
+                    {this.renderContentGoogleOauth()}</div>
+                   
+                </div>
+            </div>
+        );
+    }
 }
-export default HomePage;
+
+
+// find value from state
+function mapStateToProps({ auth }) {
+    //drog piece info from state
+    return { auth };
+}
+
+export default connect(mapStateToProps)(HomePage);

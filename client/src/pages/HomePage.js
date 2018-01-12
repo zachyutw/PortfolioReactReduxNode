@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import ProfileCard from '../components/profileCard';
 
 class HomePage extends Component {
@@ -17,27 +18,43 @@ class HomePage extends Component {
         return (
             <div className="HomePage">
                 <div className="container" >
-                    <div className="title"> 
-                        <div className="title-line hide-on-small-only"></div>
+                    <div className="moving-background">
+                        <div className="title">
+                            <div className="title-line hide-on-small-only"></div>
                             <div className="title-text">ZYX's <div className="subtitle"> ReactRedux Website</div></div>
-                        <div className="title-line hide-on-small-only"></div>
-                        
+                            <div className="title-line hide-on-small-only"></div>
+
+                        </div>
                     </div>
                     <div className="page-body">  <h3>Hello! my name is Zach Yu.</h3>
-                    <h3> I am a fresh Full Stack Developer who just graduated from BCIT CIT program. </h3>
-                    <div className="row">
-                        <div className="col s8 offset-s2"><p className="hide-on-small-only">
-                            My passion is to use technology based solutions, to help solve some real world challenges. <br />
-                            I builded this website to show some of my skills.<br />
-                            Play the button below to authorization my website by using google account <br />
-                            You will find my old and newest portfolio projects in different fields on work page <br />
-                            I also have a sendgrid auto mail form on contact page <br />
-                        </p></div>
+                        <h3> I am a fresh Full Stack Developer who just graduated from BCIT CIT program. </h3>
+                        <div className="row">
+                            <div className="col s8 offset-s2"><p className="hide-on-small-only">
+                                My passion is to use technology based solutions, to help solve some real world challenges. <br />
+                                I builded this website to show some of my skills.<br />
+                                Play the button below to authorization my website by using google account <br />
+                                You will find my old and newest portfolio projects in different fields on work page <br />
+                                I also have a sendgrid auto mail form on contact page <br />
+                            </p></div>
+                        </div>
+                        {this.renderContentGoogleOauth()}</div>
+                    <div className="floating-button ">
+                        <span className="right toggle-text hide-on-small-only">
+                            <span>Work</span>
+                                
+                                    <i className="material-icons" ><Link to="/portfolio"> keyboard_arrow_right </Link> </i>
+                               
+                        </span>
                     </div>
-                    {this.renderContentGoogleOauth()}</div>
-                   
+
+
                 </div>
+
+
+
+
             </div>
+
         );
     }
 }

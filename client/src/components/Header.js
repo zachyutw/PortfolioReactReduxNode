@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
-import logo from '../imgs/icon-small.svg';
 import _ from 'lodash';
+import svg_paths from '../imgs/icon-small-svg-paths';
 
 const PAGEROUTES = [
     { path: '/', title: 'About' },
@@ -11,6 +11,8 @@ const PAGEROUTES = [
     { path: '/contact', title: 'Contact' },
 
 ];
+
+
 
 
 class Header extends Component {
@@ -28,6 +30,12 @@ class Header extends Component {
                     </li>,
                     <li key="3"> <a href="/api/logout">Logout</a></li>];
         }
+    }
+
+    renderSvgPaths()
+    {
+        const paths = _.map(svg_paths,(path,i)=> <path d={path} key={i}></path>);
+        return paths;
     }
     renderNavDropDownList() {
         switch (this.props.auth) {
@@ -52,28 +60,38 @@ class Header extends Component {
     render() {
         //console.log(this.props);
         return (
-            <div className="header">
+            <div className="container">
+                <div className="header ">
 
-                <nav>
-                    <div className="nav-wrapper">
-                        <ul id="nav-mobile" className="left  nav-menu" >
-                            <li className="sub-menu-parent" tab-index="0">
-                                <span><i className="material-icons" style={{ fontSize: '50px' }}>menu</i></span>
-                                <ul className="sub-menu">
-                                    {this.renderNavDropDownList()}
+                    <nav>
+                        <div className="nav-wrapper">
+                            <ul id="nav-mobile" className="left  nav-menu" >
+                                <li className="sub-menu-parent" tab-index="0">
+                                    <span><i className="material-icons" style={{ fontSize: '50px' }}>menu</i></span>
+                                    <ul className="sub-menu">
+                                        {this.renderNavDropDownList()}
 
-                                </ul>
-                            </li>
-                        </ul>
-                        <div>
-                            <Link
-                                to={this.props.auth ? '/contact' : '/'}
-                                className=" right  brand-logo ">
-                                <img src={logo} className="App-logo" alt="logo" />
-                            </Link>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div>
+                                <Link
+                                    to={this.props.auth ? '/contact' : '/'}
+                                    className=" right  brand-logo ">
+                                    <svg className="App-logo" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                        width="91.000000pt" height="91.000000pt" viewBox="0 0 91.000000 91.000000"
+                                        preserveAspectRatio="xMidYMid meet">
+
+                                        <g transform="translate(0.000000,91.000000) scale(0.100000,-0.100000)"
+                                            stroke="none">
+                                            {this.renderSvgPaths()}
+                                        </g></svg>
+                                    
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
+                </div>
             </div>
         );
     }

@@ -12,10 +12,37 @@ const PAGEROUTES = [
 
 ];
 
+class ToogleMenuBtn extends Comment {
+    constructor(props) {
+        super(props);
+        this.state = { menu: false };
+        this.displayMenu = this.displayMenu.bind(this);
+    }
+    displayMenu() {
+        console.log(this.state.menu);
+        this.setState({ menu: !this.state.menu });
+    }
+
+    render() {
+        return (
+            <button onClick={this.displayMenu}> btn </button>
+
+        );
+    }
+}
 
 
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { showMenu: false };
+        this.showMenuList = this.showMenuList.bind(this);
+    }
+    showMenuList() {
+        console.log(this.state.showMenu);
+        this.setState({ showMenu: !this.state.showMenu });
+    }
     renderContentGoogleOauth() {
         switch (this.props.auth) {
             case null:
@@ -32,9 +59,8 @@ class Header extends Component {
         }
     }
 
-    renderSvgPaths()
-    {
-        const paths = _.map(svg_paths,(path,i)=> <path d={path} key={i}></path>);
+    renderSvgPaths() {
+        const paths = _.map(svg_paths, (path, i) => <path d={path} key={i}></path>);
         return paths;
     }
     renderNavDropDownList() {
@@ -44,14 +70,14 @@ class Header extends Component {
             case false:
                 const loginMenu = _.map(
                     PAGEROUTES, (page) => {
-                        return <li key={page.title}><Link to={page.path} className="animated-button victoria-one"> {page.title}</Link> </li>
+                        return <li key={page.title}><Link onClick={this.showMenuList} to={page.path} className="animated-button victoria-one"> {page.title}</Link> </li>
                     })
                     .concat(<li key="login"><a href="/auth/google" className="animated-button victoria-one">Login With Google</a> </li>);
                 return loginMenu;
             default:
                 const logoutMenu = _.map(
                     PAGEROUTES, (page) => {
-                        return <li key={page.title}><Link to={page.path} className="animated-button victoria-one"> {page.title}</Link> </li>
+                        return <li key={page.title}><Link onClick={this.showMenuList} to={page.path} className="animated-button victoria-one"> {page.title}</Link> </li>
                     })
                     .concat(<li key="logout"><a href="/api/logout" className="animated-button victoria-one">Logout</a> </li>);
                 return logoutMenu;
@@ -62,31 +88,27 @@ class Header extends Component {
         return (
             <div className="container">
                 <div className="header ">
-
                     <nav>
                         <div className="nav-wrapper">
                             <ul id="nav-mobile" className="left  nav-menu" >
                                 <li className="sub-menu-parent" tab-index="0">
-                                    <span><i className="material-icons" style={{ fontSize: '50px' }}>menu</i></span>
-                                    <ul className="sub-menu">
+                                    <span>
+                                        <i onClick={this.showMenuList} className="material-icons" style={{ fontSize: '50px' }}>
+                                            menu
+                                        </i>
+                                    </span>
+                                    <ul className={this.state.showMenu ? 'sub-menu-div-visible' : 'sub-menu-div-hidden'}>
                                         {this.renderNavDropDownList()}
-
                                     </ul>
                                 </li>
                             </ul>
                             <div>
-                                <Link
-                                    to={this.props.auth ? '/contact' : '/'}
-                                    className=" right  brand-logo ">
-                                    <svg className="App-logo" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                        width="91.000000pt" height="91.000000pt" viewBox="0 0 91.000000 91.000000"
-                                        preserveAspectRatio="xMidYMid meet">
-
+                                <Link to={this.props.auth ? '/contact' : '/'} className=" right  brand-logo ">
+                                    <svg className="App-logo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="91.000000pt" height="91.000000pt" viewBox="0 0 91.000000 91.000000" preserveAspectRatio="xMidYMid meet">
                                         <g transform="translate(0.000000,91.000000) scale(0.100000,-0.100000)"
                                             stroke="none">
                                             {this.renderSvgPaths()}
                                         </g></svg>
-                                    
                                 </Link>
                             </div>
                         </div>

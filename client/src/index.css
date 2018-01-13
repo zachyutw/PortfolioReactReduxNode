@@ -75,6 +75,35 @@ a:visited:after{
     position: relative;
 }
 
+.sub-menu-div-visible {
+    visibility:visible;
+    /* hides sub-menu */
+    background: #1E1F20;
+    opacity: 1;
+    z-index: 2;
+   
+    position: fixed;
+    height: 100%;
+    width: 70%;
+    transform: translateY(2em);
+    transition-delay: 0s, 0s, 0.3s;
+    
+}
+.sub-menu-div-hidden {
+    visibility: hidden;
+    background: rgb(110, 114, 117);
+    margin-top:5%;
+    position: fixed;
+    height: 100%;
+    width: 70%;
+    opacity: 0.5;
+    z-index: -1;
+    transform: translateY(0%);
+    transition: all 0.1s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.s;
+    
+   
+    /*this removes the transition delay so the menu will be visible while the other styles transition */
+}
 .sub-menu {
     visibility: hidden;
     /* hides sub-menu */
@@ -87,18 +116,23 @@ a:visited:after{
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
+/**
 .sub-menu-parent:focus .sub-menu,
 .sub-menu-parent:focus-within .sub-menu,
 .sub-menu-parent:hover .sub-menu {
     visibility: visible;
     /* shows sub-menu */
+    /*
     opacity: 1;
     z-index: 1;
     transform: translateY(0%);
     transition-delay: 0s, 0s, 0.3s;
-    /* this removes the transition delay so the menu will be visible while the other styles transition */
-}
+    */
+    /*this removes the transition delay so the menu will be visible while the other styles transition */
+/**}**/
 
+.sub-menu-div-hidden>li,
+.sub-menu-div-visible>li,
 .sub-menu>li {
     color: #E00;
     display: block;
@@ -112,6 +146,8 @@ a:visited:after{
     margin-top: 30px;
 }
 
+.sub-menu-div-hidden>li:hover,
+.sub-menu-div-visible>li:hover,
 .sub-menu>li:hover {
     color: #F55;
     font-size: 45px;

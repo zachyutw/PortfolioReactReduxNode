@@ -1,0 +1,158 @@
+.social_button {
+    text-align: center;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    min-width: 250px;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    text-transform: none;
+    margin-bottom: 14px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+  }
+  .social_button:link {
+    text-decoration: none;
+    color: white;
+  }
+  .social_button:visited {
+    text-decoration: none;
+    color: white;
+  }
+  .social_button:active {
+    text-decoration: none;
+  }
+  .social_button:hover {
+    text-decoration: none;
+    color: #401c69;
+  }
+  .social_button p {
+    font-size: 18px;
+  }
+  .social_button span {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    font-size: 30px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+  }
+  .social_button.email {
+    background: #2a3d45;
+  }
+  .social_button.email:hover {
+    color: #ffc688;
+  }
+  .social_button.twitter {
+    background: #00acee;
+  }
+  .social_button.twitter:hover {
+    color: #ffc688;
+  }
+  .social_button.facebook {
+    background: #3b5998;
+  }
+  .social_button.facebook:hover {
+    color: #e4af48;
+  }
+  .social_button.google-plus {
+    background: #db4a39;
+  }
+  .social_button.google-plus:hover {
+    color: #74d088;
+  }
+  .social_button.linkedin {
+    background: #0e76a8;
+  }
+  .social_button.linkedin:hover {
+    color: #ff8d09;
+  }
+  .social_button.youtube {
+    background: #c4302b;
+  }
+  .social_button.youtube:hover {
+    color: #6bca71;
+  }
+  .social_button.github {
+    background: #171515;
+  }
+  .social_button.github:hover {
+    color: #ffd6b8;
+  }
+  .social_button.codepen {
+    background: #636363;
+  }
+  .social_button.codepen:hover {
+    color: #fff3b0;
+  }
+  .social_button.android {
+    background: #a4c639;
+  }
+  .social_button.android:hover {
+    color: #fdaee9;
+  }
+  .social_button.skype {
+    background: #00aff0;
+  }
+  .social_button.skype:hover {
+    color: #ff8500;
+  }
+  .social_button.dropbox {
+    background: #3d9ae8;
+  }
+  .social_button.dropbox:hover {
+    color: #ffaa35;
+  }
+  .social_button.foursquare {
+    background: #25a0ca;
+  }
+  .social_button.foursquare:hover {
+    color: #ff9627;
+  }
+  .social_button.apple {
+    background: #cdcdcd;
+  }
+  .social_button.apple:hover {
+    color: black;
+  }
+  .social_button.dribbble {
+    background: #ea4c89;
+  }
+  .social_button.dribbble:hover {
+    color: #a5f14e;
+  }
+  .social_button.instagram {
+    background: #3f729b;
+  }
+  .social_button.instagram:hover {
+    color: #f0b057;
+  }
+  .social_button.pinterest {
+    background: #c8232c;
+  }
+  .social_button.pinterest:hover {
+    color: #a0fc96;
+  }
+  .social_button.stackoverflow {
+    background: #ef8236;
+  }
+  .social_button.stackoverflow:hover {
+    color: #b7fdf3;
+  }
+  .social_button.flickr {
+    background: #ff0084;
+  }
+  .social_button.flickr:hover {
+    color: #f1ffd8;
+  }
+  

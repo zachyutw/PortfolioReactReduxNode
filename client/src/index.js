@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 
 // eslint-disable-next-line
 import css from './index.css';
+// eslint-disable-next-line
+import socailMediaCSS from './css/social-media.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';

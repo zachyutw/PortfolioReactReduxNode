@@ -21,16 +21,6 @@ class SurveyForm extends Component {
                 <Field key={name} component={SurveyField} type="text" label={label} name={name} />
             );
         })
-        /** 
-         * use ladsh to improve the code structure
-            return (
-                <div>
-                    <Field label="Survey Title" type="text" name="title" component={SurveyField}  />
-                    <Field label="Subject Line" type="text" name="subject" component={SurveyField}  />
-                    <Field label="Email Body" type="text" name="body" component={SurveyField}  />
-                    <Field label="Recipients List" type="text" name="email" component={SurveyField}  />
-                </div>)
-        **/
         
     }
     //<form onSubmit={this.props.handleSubmit(values=>{this.renderFields()})}

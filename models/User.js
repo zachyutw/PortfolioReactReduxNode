@@ -23,14 +23,28 @@ const userSchema = new Schema({
         type:Number,
         default:0
     },   
-    user_name:{
+    name:{
         type:String,
     },
     photo: {
         type:String,
         default: 'http://thehumorous.com/wp-content/uploads/2013/11/Did-you-eat-the-kitty-cats-treats-Denver-50x50.gif'
      },
-    contact_info: ContactsSchema
+    contact_info: ContactsSchema,
+    admin: {
+        type:Boolean,
+        default:false
+    },
+    desc:{
+        type:String,
+        default:'Please talk more about yourself'
+    },
+    jobtitle:{
+        tpye:String,
+        default:''
+    },
+
+
 });
 
 

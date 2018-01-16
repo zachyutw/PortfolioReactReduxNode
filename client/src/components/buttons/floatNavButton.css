@@ -1,0 +1,65 @@
+/****/
+
+.floating-nav-arrow-btn {
+    position: fixed;
+    height: 30%;
+    bottom: 30%;
+    z-index: 50px;
+}
+
+.floating-nav-arrow-btn .right {
+    position: fixed;
+    right: 16%;
+}
+
+.floating-nav-arrow-btn .right .material-icons 
+ {
+    font-size: 70px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.floating-nav-arrow-btn .right .material-icons:hover 
+ {
+    font-size: 100px;
+    color: rgba(248, 228, 227, 0.4);
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.floating-nav-arrow-btn .left {
+    position: fixed;
+    left: 16%;
+}
+
+.floating-nav-arrow-btn .left .material-icons 
+ {
+    font-size: 70px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.floating-nav-arrow-btn .left .material-icons:hover 
+ {
+    font-size: 100px;
+    color: rgba(248, 228, 227, 0.4);
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.floating-nav-arrow-btn .left .material-icons {
+    font-size: 70px;
+    display: inline-flex;
+}
+
+.floating-nav-arrow-btn .toggle-text span  {
+    visibility: hidden;
+    font-size: 10px;
+    transition: all 0.5s ease-in-out 0.1s, visibility 0.1s linear 0.5s, z-index 0s linear 0.01s;
+}
+
+.floating-nav-arrow-btn .toggle-text:hover span {
+    visibility: visible;
+    transition-delay: 0.2s, 0s, 1s;
+    font-size: 15px;
+}

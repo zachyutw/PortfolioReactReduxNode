@@ -6,7 +6,7 @@ const ProfileCard = (props) => {
     return (<div className="profileCard">
         <img src={props.auth.photo} alt="profile img"></img>
         <div className="profileCard-content"> 
-        <p>{props.auth.user_name} <br/>
+        <p>{props.auth.name} <br/>
             Welcome</p>
             </div>
     </div>);

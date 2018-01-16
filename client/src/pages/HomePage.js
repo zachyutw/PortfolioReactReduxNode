@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import ProfileCard from '../components/profileCard';
+import FloatNavButton from '../components/buttons/floatNavButton'; /** linkLeft, linkRight */
+
+import {PAGEROUTES} from '../App';
+
+
 
 class HomePage extends Component {
     renderContentGoogleOauth() {
@@ -38,14 +42,7 @@ class HomePage extends Component {
                             </p></div>
                         </div>
                         {this.renderContentGoogleOauth()}</div>
-                    <div className="floating-button ">
-                        <span className="right toggle-text hide-on-small-only">
-                            <span>Work</span>
-                                
-                                    <i className="material-icons" ><Link to="/portfolio"> keyboard_arrow_right </Link> </i>
-                               
-                        </span>
-                    </div>
+                    <FloatNavButton linkRight= {PAGEROUTES[1]} />
 
 
                 </div>

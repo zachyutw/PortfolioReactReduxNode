@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
 // eslint-disable-next-line
-import css from './index.css';
+import './index.css';
+import './css/menuPage.css'
 // eslint-disable-next-line
 import socailMediaCSS from './css/social-media.css';
 import React from 'react';

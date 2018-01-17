@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-class BookDetail extends Component{
+class PortfolioItem extends Component{
 
 	render(){
 
-		if (!this.props.book) {
+		if (!this.props.portfolio) {
 			return <div>Select a book to get started.</div>
 		}
 		return (
 			<div> 
 			<h3>Detials:</h3>
-			<div>Title:{this.props.book.title}</div>
-			<div>Page:{this.props.book.page}</div>
+			<div>Title:{this.props.portfolio.title}</div>
 			</div>
 
 			);
@@ -22,8 +21,8 @@ class BookDetail extends Component{
 function mapStateToProps(state)
 {
 	return {
-		book:state.activeBook
+		portfolio:state.select_portfolio
 	};
 }
 
-export default connect(mapStateToProps)(BookDetail);
+export default connect(mapStateToProps)(PortfolioItem);

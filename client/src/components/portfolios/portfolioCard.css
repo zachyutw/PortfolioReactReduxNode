@@ -1,0 +1,10 @@
+.card {
+    width: 310px;
+    padding: 5px;
+}
+.card-header{
+    
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+}

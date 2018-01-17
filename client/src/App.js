@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
+// eslint-disable-next-line
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+// eslint-disable-next-line
 import anime from 'animejs';
 import { connect } from 'react-redux';
 import * as actions from './actions';

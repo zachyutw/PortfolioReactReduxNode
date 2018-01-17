@@ -1,4 +1,4 @@
-import { FETCH_SURVEYS } from '../actions/types';
+import { FETCH_SURVEYS } from '../actions';
 
 export default function(state =[],action){
 

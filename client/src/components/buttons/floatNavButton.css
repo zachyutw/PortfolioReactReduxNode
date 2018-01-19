@@ -9,7 +9,7 @@
 
 .floating-nav-arrow-btn .right {
     position: fixed;
-    right: 16%;
+    right: 2%;
 }
 
 .floating-nav-arrow-btn .right .material-icons 
@@ -29,7 +29,7 @@
 
 .floating-nav-arrow-btn .left {
     position: fixed;
-    left: 16%;
+    left: 2%;
 }
 
 .floating-nav-arrow-btn .left .material-icons 

@@ -4,8 +4,10 @@ import _ from 'lodash';
 import './floatNavButton.css';
 
 
-const renderFloatButtonRight = (link) => {
-    if (!_.isEmpty(link)) {
+function renderFloatButtonRight(link) {
+    
+    if (!_.isEmpty(link.linkRight)) {
+        console.log("right",link.linkRight);
         return (<div className="floating-nav-arrow-btn ">
             <span className="right toggle-text hide-on-small-only">
                 <span>{link.linkRight.title}</span><Link to={link.linkRight.path}><i className="material-icons" > keyboard_arrow_right </i></Link>
@@ -13,11 +15,13 @@ const renderFloatButtonRight = (link) => {
         </div>);
     }
     else {
+        console.log("right empty",link);
         return <div></div>
     }
 }
-const renderFloatButtonLeft = (link) => {
-    if (!_.isEmpty(link)) {
+function renderFloatButtonLeft(link) {
+    if (!_.isEmpty(link.linkLeft)) {
+        console.log("Left",link.linkLeft);
         return (
             <div className="floating-nav-arrow-btn ">
                 <span className="left toggle-text hide-on-small-only">
@@ -30,11 +34,17 @@ const renderFloatButtonLeft = (link) => {
     }
 }
 
-const FloatNavButton = (linkLeft = {}, linkRight = {}) => {
+const FloatNavButton = (props) => {
+    console.log("props",props);
     return (
         <div>
-            {renderFloatButtonRight(linkLeft)}
-            {renderFloatButtonLeft(linkRight)}
+            
+             <div>   
+                 {renderFloatButtonLeft(props)}
+            </div>
+            <div>
+                {renderFloatButtonRight(props)}
+             </div>
         </div>
     );
 }

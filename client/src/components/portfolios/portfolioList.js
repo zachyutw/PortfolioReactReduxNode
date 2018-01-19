@@ -4,7 +4,7 @@ import { selectPortfolio, fetchPortfolios } from '../../actions';
 import { bindActionCreators } from 'redux';
 import PortfolioCard from './portfolioCard';
 import './portfolioCard.css';
-import _ from 'lodash';
+
 
 class PortfolioList extends Component {
     componentDidMount() {

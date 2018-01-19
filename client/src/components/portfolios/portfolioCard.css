@@ -1,10 +1,95 @@
 .card {
-    width: 310px;
-    padding: 5px;
+    background: #1F1F20;
 }
-.card-header{
-    
-    height: 100px;
+
+.p-card {
+    width: auto;
+    height: 270px;
+    background-color: #33343A;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+.p-card-header {
+    position: relative;
+    height: 175px;
+	overflow: hidden;
+	z-index: 1;
     background-repeat: no-repeat;
-    background-size: 300px 100px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+
+}
+.card-animation-example{
+		
+	-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate-reverse; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+    animation-direction: alternate-reverse;    
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+	100% {background-color: green;}
+}
+.p-card-header:hover {
+
+}
+
+.p-card-header .p-card-title h3 {
+    color: #33343A;
+    background-color: rgba(246,195,203,0.6);
+    margin-top: 150px;
+    z-index: 2;
+}
+
+.p-card-summary {
+	font-size: 12px;
+	margin: 10px auto 10px auto;
+	display: block;
+}
+.p-card-meta {
+	font-size: 14px;
+	margin: 10px auto 10px auto;
+	display: block;
+}
+
+.card-selected{
+
+}
+.s-card{
+	width: auto;
+    height: 320px;
+	background-color: #33343A;
+	margin: 5% 10% 5% 10%;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+}
+.p-card-header {
+    position: relative;
+    height: 175px;
+	overflow: hidden;
+	z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+
 }

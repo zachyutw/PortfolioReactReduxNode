@@ -42,13 +42,13 @@ class HomePage extends Component {
                             </p></div>
                         </div>
                         {this.renderContentGoogleOauth()}</div>
-                    <FloatNavButton linkRight= {PAGEROUTES[1]} />
+                   
 
 
                 </div>
 
 
-
+                <FloatNavButton linkRight= {PAGEROUTES[1]} />
 
             </div>
 

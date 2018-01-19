@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import './portfolioCard.css';
 
 const PortfolioCard = ({ content }) => {
@@ -9,16 +8,13 @@ const PortfolioCard = ({ content }) => {
         default:
 
             return (
-                <div >
-                    <div className="card-header" style={{backgroundImage: `url(${content.img})`,color:'black'}}>
-                        <span className="card-title">
+                <div className="p-card">
+                    <div className="p-card-header" style={{backgroundImage: `url(${content.img})`}}>
+                        <span className="p-card-title">
                             <h3>{content.title}</h3>
                         </span>
                     </div>
-                    <span className="card-summary">
-                        {content.desc}
-                    </span>
-                    <span className="card-meta">
+                    <span className="p-card-meta">
                         Published: {content.project_date}
                     </span>
                 </div>);

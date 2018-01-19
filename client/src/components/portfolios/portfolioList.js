@@ -11,7 +11,7 @@ class PortfolioList extends Component {
         this.props.fetchPortfolios();
     }
     renderList() {
-        return this.props.portfolios.map((portfolio) => {
+        return this.props.portfolios.reverse().map((portfolio) => {
             return (
                 <div className="col l4 m6 s12 card"
                     onClick={() => this.props.selectPortfolio(portfolio)}

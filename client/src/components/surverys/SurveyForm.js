@@ -6,6 +6,7 @@ import { reduxForm, Field } from 'redux-form';
 import SurveyField from './SurveyField';
 import {Link} from 'react-router-dom';
 import _ from 'lodash';
+import './Survey.css';
 //use reduxForm to communicate with our store
 //Filed can help to render any form input
 
@@ -27,11 +28,11 @@ class SurveyForm extends Component {
      //<Field type="text" name="surveyTitle" component="input" />
     render() {
         return (
-            <div className="surveyForm">
-               <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)   }>
+            <div className="surveyForm" >
+               <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)} >
                     {this.renderFields()}
-                    <Link to="/surveys" className="red btn-flat white-text">
-                        Cancel
+                    <Link to="/surveys" className="btn waves-effect waves-light red darken-3">
+                    <i className="material-icons left">cancel</i> Cancel 
                     </Link>
                     <button className="btn waves-effect waves-light right" type="submit" name="action">
                         Next

@@ -1,0 +1,25 @@
+.surveyForm-field-label{
+    font-size: 20px;
+    margin: 5px 5px 0px 5px;
+}
+.surveyForm-field-input{
+    margin: 2px 5px 5px 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.surveyForm-field-error{
+    margin-bottom: 20px;
+}
+
+.surveyForm-fields{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.surveyFormReview-buttons{
+    margin: 5px 5px 5px 5px;
+}
+
+.surveyFormReview h3{
+    color: #9E9E9E;
+}

@@ -11,10 +11,10 @@
      //touched is true and error has value
      
      return (
-        <div>
-            <label>{label}</label>
-            <input {...input} style={{ marginBottom:'5px'}} />
-            <div className="red-text" style={{marginBottom:'20px'}}  >
+        <div >
+            <label className="surveyForm-field-label">{label}</label>
+            <input className="surveyForm-field-input" {...input}  />
+            <div className="red-text surveyForm-field-error"   >
             {touched && error}
             </div>
            

@@ -30,8 +30,9 @@ class SurveyNew extends Component {
     render() {
         return (
             <div className="surveyNew">
+                <div className="container">
                 {this.renderContent()}
-
+                </div>
             </div>
         );
     }

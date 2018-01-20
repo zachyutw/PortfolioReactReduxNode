@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./portfolioCard.css";
 // img, title, tags, desc, complete, github_url, project_date
 class PortfolioItem extends Component {
@@ -11,7 +11,7 @@ class PortfolioItem extends Component {
 		})
 	}
 
-	renderContent({ img, title, tags, desc, complete, github_url, project_date, link ,url_link}) {
+	renderContent({ img, title, tags, desc, complete, github_url, project_date, link, url_link }) {
 		return (
 			<div className="s-card row hoverable">
 
@@ -23,33 +23,29 @@ class PortfolioItem extends Component {
 					<div className="s-card-tags hide-on-med-and-down"> {this.renderTags(tags)} </div>
 					<div className="s-card-desc hide-on-med-and-down"><span><h3 style={{ display: 'inline' }}>Desc: </h3> {desc} </span> </div>
 					<div className="bottom">
-					<div className="s-card-footer">
-						<div className="col l4 m4 s4 center"> 
-						{
-						link ? (<Link className="btn waves-effect waves-light" to={link}>link<i className="material-icons right">link</i></Link>):''
-						}
-						{
-						url_link ?
-							(
-								<a className="btn waves-effect waves-light" href={url_link} target="_blank">link <i className="material-icons right">link</i></a>
-							) : ""
-						}
-					    </div>
-						<div className="col l4 m4 s4 "> 
-						{ (github_url ? 
-							<button className="btn waves-effect waves-light">
-							<a href={github_url}>Github</a>
-							<i className="material-icons right">code</i>
-						</button>:'')
-						}
+						<div className="s-card-footer">
+							<div className="col l4 m4 s4 center">
+								{link ?
+									(<Link className="btn waves-effect waves-light" to={link}>link<i className="material-icons right">link</i></Link>)
+									: ''
+								}
+								{url_link ?
+									(<a className="btn waves-effect waves-light" href={url_link} target="_blank">link <i className="material-icons right">link</i></a>)
+									: ''
+								}
+							</div>
+							<div className="col l4 m4 s4 ">
+								{github_url ?
+									<a className="btn waves-effect waves-light" href={github_url}>Github<i className="material-icons right">code</i></a>
+									: ''
+								}
+							</div>
+							<div className="col l4 m4 s4 right">	{project_date}  </div>
 						</div>
-						<div className="col l4 m4 s4 right">	{project_date}  </div>
-					</div>
-						
-					
 					</div>
 				</div>
 			</div>
+
 		);
 	}
 	render() {

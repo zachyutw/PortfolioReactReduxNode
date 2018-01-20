@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 import "./portfolioCard.css";
 // img, title, tags, desc, complete, github_url, project_date
 class PortfolioItem extends Component {
@@ -25,18 +26,13 @@ class PortfolioItem extends Component {
 					<div className="s-card-footer">
 						<div className="col l4 m4 s4 center"> 
 						{
-						link ?
-							(<button className="btn waves-effect waves-light">
-								<a href={link}>link</a>
-								<i className="material-icons right">link</i>
-							</button>) : ""
+						link ? (<Link className="btn waves-effect waves-light" to={link}>link<i className="material-icons right">link</i></Link>):''
 						}
 						{
 						url_link ?
-							(<button className="btn waves-effect waves-light">
-								<a href={url_link} target="_blank">link</a>
-								<i className="material-icons right">link</i>
-							</button>) : ""
+							(
+								<a className="btn waves-effect waves-light" href={url_link} target="_blank">link <i className="material-icons right">link</i></a>
+							) : ""
 						}
 					    </div>
 						<div className="col l4 m4 s4 "> 

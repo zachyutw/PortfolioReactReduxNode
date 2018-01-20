@@ -7,7 +7,7 @@ import './floatNavButton.css';
 function renderFloatButtonRight(link) {
     
     if (!_.isEmpty(link.linkRight)) {
-        console.log("right",link.linkRight);
+        
         return (<div className="floating-nav-arrow-btn ">
             <span className="right toggle-text hide-on-small-only">
                 <span>{link.linkRight.title}</span><Link to={link.linkRight.path}><i className="material-icons" > keyboard_arrow_right </i></Link>
@@ -21,7 +21,7 @@ function renderFloatButtonRight(link) {
 }
 function renderFloatButtonLeft(link) {
     if (!_.isEmpty(link.linkLeft)) {
-        console.log("Left",link.linkLeft);
+        
         return (
             <div className="floating-nav-arrow-btn ">
                 <span className="left toggle-text hide-on-small-only">
@@ -35,7 +35,7 @@ function renderFloatButtonLeft(link) {
 }
 
 const FloatNavButton = (props) => {
-    console.log("props",props);
+   
     return (
         <div>
             

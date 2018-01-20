@@ -15,7 +15,7 @@ class HomePage extends Component {
             case false:
                 return <a href="/auth/google" className="btn social-signin google">Log in with Google+</a>;
             default:
-                return <ProfileCard auth={this.props.auth} />
+                return <ProfileCard auth={this.props.auth} content="Welcom"/>
         }
     }
     render() {

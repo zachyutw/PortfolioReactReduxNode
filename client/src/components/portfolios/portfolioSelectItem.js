@@ -1,49 +1,77 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import "./portfolioCard.css";
 // img, title, tags, desc, complete, github_url, project_date
-class PortfolioItem extends Component{
+class PortfolioItem extends Component {
 
-	renderTags(tags)
-	{
-		return tags.map( (tag)=>{
-			return <span> {tag}</span>
+	renderTags(tags) {
+		return tags.map((tag) => {
+			return <span key={tag}> {tag}</span>
 		})
 	}
-	renderContent({img, title, tags, desc, complete, github_url, project_date}){
-		return (
-		<div className="s-card row hide-on-small-only"> 
 
-			    <div className=" s-card-header col l4 m4 s4 push-l1">
+	renderContent({ img, title, tags, desc, complete, github_url, project_date, link ,url_link}) {
+		return (
+			<div className="s-card row hoverable">
+
+				<div className=" s-card-header col l4 m12 s12 push-l1">
 					<h3>{title} </h3>
-					<img alt="test" src= {img} />
+					<img alt={title} src={img} />
 				</div>
-				<div  className="col l7 m7 s12">
-					<div> {this.renderTags(tags)} </div>
-					<h3>Desc:</h3><p>{desc}</p>
-					<a href={github_url}>Github link</a>
-					<p>{project_date}</p>
-			    </div>
+				<div className="col l7 m12 s12 s-card-content">
+					<div className="s-card-tags hide-on-med-and-down"> {this.renderTags(tags)} </div>
+					<div className="s-card-desc hide-on-med-and-down"><span><h3 style={{ display: 'inline' }}>Desc: </h3> {desc} </span> </div>
+					<div className="bottom">
+					<div className="s-card-footer">
+						<div className="col l4 m4 s4 center"> 
+						{
+						link ?
+							(<button className="btn waves-effect waves-light">
+								<a href={link}>link</a>
+								<i className="material-icons right">link</i>
+							</button>) : ""
+						}
+						{
+						url_link ?
+							(<button className="btn waves-effect waves-light">
+								<a href={url_link} target="_blank">link</a>
+								<i className="material-icons right">link</i>
+							</button>) : ""
+						}
+					    </div>
+						<div className="col l4 m4 s4 "> 
+						{ (github_url ? 
+							<button className="btn waves-effect waves-light">
+							<a href={github_url}>Github</a>
+							<i className="material-icons right">code</i>
+						</button>:'')
+						}
+						</div>
+						<div className="col l4 m4 s4 right">	{project_date}  </div>
+					</div>
+						
+					
+					</div>
+				</div>
 			</div>
 		);
 	}
-	render(){
+	render() {
 
 		if (!this.props.portfolio) {
 			return <div className="hide-on-small-only">Select a Portfolio to get Detail.</div>
 		}
 		return (
 			<div className="selected-portfolio">
-			{this.renderContent(this.props.portfolio)}
+				{this.renderContent(this.props.portfolio)}
 			</div>
-			);
+		);
 	}
 }
 
-function mapStateToProps(state)
-{
+function mapStateToProps(state) {
 	return {
-		portfolio:state.select_portfolio
+		portfolio: state.select_portfolio
 	};
 }
 

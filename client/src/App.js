@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import * as actions from './actions';
 import Header from './components/Header/Header';
 //import Landing from './components/Landing';
-import Dashboard from './pages/testPages/Dashboard';
+import Dashboard from './pages/Dashboard';
 import SuveryNew from './components/surverys/SurveyNew';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';

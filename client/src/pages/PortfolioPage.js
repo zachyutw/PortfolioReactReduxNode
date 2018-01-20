@@ -3,7 +3,7 @@ import PortfolioList from '../components/portfolios/portfolioList';
 import PortfolioSelectItem from '../components/portfolios/portfolioSelectItem';
 import {PAGEROUTES} from '../App';
 import FloatNavButton from '../components/buttons/floatNavButton';
-import {Link} from 'react-router-dom';
+
 
 const page_number = 1;
 
@@ -17,8 +17,7 @@ class PortfolioPage extends Component {
                 <div className="container" style={{ textAlign: 'center' }}>
                     <h1>PortfolioPage</h1>
 
-                    <h2>Coming soon!</h2>
-                    <Link to="/surveys/new"> surveys new </Link>
+                 
                     <div>
                        <PortfolioSelectItem />
                         <PortfolioList />

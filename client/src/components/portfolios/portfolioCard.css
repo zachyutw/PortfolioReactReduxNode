@@ -74,13 +74,15 @@
 
 }
 .s-card{
+    
 	width: auto;
     height: 320px;
-	background-color: #33343A;
+	background-color: rgb(81, 84, 97);
 	margin: 5% 10% 5% 10%;
     padding: 20px;
     text-align: center;
     align-content: center;
+    position: relative;
 }
 .p-card-header {
     position: relative;
@@ -92,4 +94,32 @@
     background-position: center;
     background-blend-mode: overlay;
 
+}
+.s-card-header img  {
+    height: 200px;
+    width: 300px;
+}
+.s-card-tags {
+    width:80%;
+    margin-left: 15%;
+   text-align: left;
+}
+.s-card-tags span {
+    margin:6px 3px 6px 3px;
+    padding:0px 4px 0px 4px;
+    background-color: rgba(246,195,203,0.6);
+}
+.s-card-desc{
+    width:80%;
+    margin: 20px auto 20px 15%;
+    height: 130px;
+   text-align: left;
+}
+.s-card-content{
+  
+    
+}
+.s-card-footer{
+    margin-left: 10%;
+  
 }

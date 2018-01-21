@@ -3,7 +3,7 @@ import Payments from '../components/Payments';
 
 const ProfileCard = (props) => {
 
-    console.log(props.auth);
+    //console.log(props.auth);
     return (
         <div className="profileCard">
            <Payments style={{display:'block'}} />

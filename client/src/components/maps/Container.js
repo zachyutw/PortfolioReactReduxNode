@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import GoogleApiComponent from '../../js/GoogleApiComponent'
+import GoogleApiComponent from '../../js/GoogleApiComponent';
 
 export class Container extends React.Component {
     render() {

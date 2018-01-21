@@ -113,7 +113,7 @@ class ContactPage extends Component {
 
 
     render() {
-        console.log(this.props.auth)
+       // console.log(this.props.auth)
         return (
             <div className="ContactPage">
                 <div className="container" style={{ textAlign: 'center' }}>
@@ -126,7 +126,7 @@ class ContactPage extends Component {
 
                     <div className="row">
                         <h2> My location </h2>
-                        <MyMap isMarkerShown
+                        <MyMap 
                             isMarkerShown={this.state.isMarkerShown}
                             onMarkerClick={this.handleMarkerClick}
                             zoom={this.state.zoom}

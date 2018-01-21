@@ -8,36 +8,7 @@ import { PAGEROUTES } from '../App';
 import '../css/contactPage.css';
 import '../components/surverys/Survey.css';
 
-const LoginContactForm = ({name, email})=>{
-    return (<div className="row">
-                <form className="col s12">
-                    <div className="row">
-                        <div className=" col s12">
-                        <label className="surveyForm-field-label"> Name: {name}</label>
-                        <label className="surveyForm-field-label"> Email: {email}</label>                      
-                        </div>
-    
-                    </div>
-    
-                    <div className="row">
-                        <div className="col s12">
-                        <label className="surveyForm-field-label">Subject</label>
-                        <input className="surveyForm-field-input "  id="_name" type="text"  style={{fontSize:'24px',width:'70%'}}/> 
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className=" col s12">
-                        <textarea name="message" id="message" className="form textarea"  placeholder="Message" style={{height:'200px',width:'70%'}}></textarea>
-                        </div>
-                    </div>
-                    <button className="btn waves-effect waves-light right" type="submit" name="action" >
-                        Message (Not Working)
-                        <i className="material-icons right">message</i>
-                    </button>
-                    
-                </form>
-                </div>)
-}
+
 
 
 class ContactPage extends Component {

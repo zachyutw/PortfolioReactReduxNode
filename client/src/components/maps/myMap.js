@@ -5,7 +5,8 @@ import GoogelMapStyleJson from './googelMapStyleJson';
 
 const MyMapComponent = compose(
     withProps({
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
+        
+        googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,place",
         loadingElement: <div style={{ height: `100%` }} />,
         mapElement: <div style={{ height: `100%` }} />,
     }),

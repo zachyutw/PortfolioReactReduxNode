@@ -12,7 +12,7 @@ class Header extends Component {
         this.showMenuList = this.showMenuList.bind(this);
     }
     showMenuList() {
-        console.log(this.state.showMenu);
+        //console.log(this.state.showMenu);
         this.setState({ showMenu: !this.state.showMenu });
     }
 

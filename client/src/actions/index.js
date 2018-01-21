@@ -30,6 +30,6 @@ export function selectPortfolio(portfolio){
 export const FETCH_PORTFOLIOS = 'fetch_portfolios';
 export function fetchPortfolios(){
     const portfolios = portfolios_data();
-    console.log('actions',portfolios);
+   // console.log('actions',portfolios);
    return {type:FETCH_PORTFOLIOS, payload: portfolios};
 }

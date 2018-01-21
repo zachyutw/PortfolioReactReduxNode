@@ -15,7 +15,7 @@ function renderFloatButtonRight(link) {
         </div>);
     }
     else {
-        console.log("right empty",link);
+        //console.log("right empty",link);
         return <div></div>
     }
 }

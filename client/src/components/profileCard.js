@@ -9,7 +9,7 @@ const ProfileCard = (props) => {
            <Payments style={{display:'block'}} />
             <img src={props.auth.photo} alt="profile img"></img>
             <div className="profileCard-content">
-                <p>{props.auth.user_name} <br />
+                <p>{props.auth.name} <br />
                     {props.content} <br />
                     Credit:{props.auth.credits}
                     </p>

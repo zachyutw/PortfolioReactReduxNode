@@ -36,7 +36,7 @@ class PortfolioItem extends Component {
 							</div>
 							<div className="col l4 m4 s4 ">
 								{github_url ?
-									<a className="btn waves-effect waves-light" href={github_url}>Github<i className="material-icons right">code</i></a>
+									<a className="btn waves-effect waves-light" href={github_url} target="_blank">Github<i className="material-icons right">code</i></a>
 									: ''
 								}
 							</div>

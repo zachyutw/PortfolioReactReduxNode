@@ -14,6 +14,7 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import PortfolioPage from './pages/PortfolioPage';
 import MenuPage from './pages/MenuPage';
+import GoogleSearchMap from './pages/GoogleSearchMap';
 import './App.css';
 
 export const PAGEROUTES = [
@@ -43,6 +44,7 @@ class App extends Component {
                         <Route exact path="/" component={HomePage} />
                         <Route exact path="/surveys/new" component={SuveryNew} />
                         <Route exact path="/menu" component={MenuPage} />
+                        <Route exact path="/googleSearchMap" component={GoogleSearchMap} />
                         
                     </Switch>
                     </div>

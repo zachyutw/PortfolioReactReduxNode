@@ -3,13 +3,9 @@ import { connect } from 'react-redux';
 import FloatNavButton from '../components/buttons/floatNavButton';
 import MyMap from '../components/maps/myMap';
 
-
 import { PAGEROUTES } from '../App';
 import '../css/contactPage.css';
 import '../components/surverys/Survey.css';
-
-
-
 
 class ContactPage extends Component {
 
@@ -103,14 +99,12 @@ class ContactPage extends Component {
                     <button className="btn waves-effect waves-light right" type="submit" name="action" >
                         (Butoon Not Working Now)
                         <i className="material-icons right">message</i>
-                    </button>
-                    
+                    </button>                 
                 </form>
                 </div>)
         }
 
     }
-
 
     render() {
        // console.log(this.props.auth)
@@ -118,31 +112,20 @@ class ContactPage extends Component {
             <div className="ContactPage">
                 <div className="container" style={{ textAlign: 'center' }}>
                     <h1>Contact Me</h1>
-
-
-                    
-
-                    {this.renderContactForm()}
-
+                     {this.renderContactForm()}
                     <div className="row">
                         <h2> My location </h2>
                         <MyMap 
                             isMarkerShown={this.state.isMarkerShown}
-                            onMarkerClick={this.handleMarkerClick}
-                            zoom={this.state.zoom}
-                            location={this.state.location}
-                            containerElement={<div style={{ height: `300px` }} />}
+                            onMarkerClick={this.handleMarkerClick}                            
                         />
                     </div>
-
-
                 </div>
                 <FloatNavButton linkLeft={PAGEROUTES[1]} />
             </div>
         );
     }
 }
-
 
 // find value from state
 function mapStateToProps({ auth }) {

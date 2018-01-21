@@ -67,8 +67,18 @@ export default function () {
             complete: true,
             link: '/surveys',
             github_url: 'https://github.com/zachyutw/PortfolioReactReduxNode',
-            project_date: new Date(2018, 0, 9).toDateString()
+            project_date: new Date(2018, 0, 18).toDateString()
         },
+        {
+            img: 'https://i.imgur.com/S6qFViK.png',
+            title: 'Google Map Search',
+            tags: ['reactjs','react-google-maps','google-map-api'],
+            desc: 'A React Web App. Use react-google-maps to make a google search map and styling',
+            complete: true,
+            link: '/GoogleSearchMap',
+            github_url: 'https://github.com/zachyutw/PortfolioReactReduxNode',
+            project_date: new Date(2018, 0,20).toDateString()
+        }
 
     ]);
 }
